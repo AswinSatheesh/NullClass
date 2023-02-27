@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Ola"
         tools:targetApi="31">
         <activity
+            android:name=".LoginandSignUp.LoginByMail"
+            android:exported="false" />
+        <activity
+            android:name=".LoginandSignUp.PhoneLogin"
+            android:exported="false" />
+        <activity
+            android:name=".LoginandSignUp.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -22,8 +37,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:screenOrientation="portrait"

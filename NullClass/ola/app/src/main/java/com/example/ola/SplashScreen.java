@@ -10,10 +10,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.ola.LoginandSignUp.Login;
 
 public class SplashScreen extends AppCompatActivity {
     ImageView logo;
-    private int duration =2500;
+    private int duration =3500;
     Animation anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+                Intent intent = new Intent(SplashScreen.this, Login.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 Animatoo.animateZoom(SplashScreen.this);
